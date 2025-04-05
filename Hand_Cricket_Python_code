@@ -1,0 +1,85 @@
+import random
+print("Hello")
+a=str(input("Enter your name to register in the game:"))
+b=print(f"welcome Mr.{a} to play hand cricket")
+c=str(input("choose head or tail:"))
+z=0
+p=0
+if ((c=="head" )or(c== "tail")):
+    f=str(input("yeh---you won in toss what you do first select (batting or bowling):"))
+    if f=="batting":
+        
+
+       
+        for i in range(10):
+            x=int(input("enter a number between 1 to 6:"))
+            data=random.randint(1,6)
+            
+
+
+            if x==data:
+                print("you are out!------")
+                break
+            elif(x!=data):
+                z=z+x
+
+            
+
+        print(f" {a} Your Final score is:",z)
+        print(f"you need to restrict below {z} runs to win the match")
+        print("Lets start the second innings----------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+        print("Get position team we need to give our best***********************")
+        
+    else:
+        for i in range(10):
+                x=int(input("enter a number between 1 t0 6:"))
+                data=random.randint(1,6)
+                
+
+              
+                if x==data:
+                    print("you are taken wicket-- out!!!!!!!!!------")
+                    break
+                elif(x!=data):
+                   
+                    
+                    p=p+x
+                
+
+            print(f" {a} Opponent Final score is:",p)
+            print(f"you need to get {p+1} runs to win the match")
+            print("Lets start the second innings----------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+            print("*************************************************")  
+else:
+    pass
+
+
+y=0
+
+for i in range(10):
+    l=int(input("enter a number between 1 to 6:"))
+    has=random.randint(1,6)
+            
+
+
+    if l==has:
+        print("you are out!------")
+        break
+    elif(l!=has):
+        y=y+l
+        if (y>z and y>p):
+            break
+        
+            
+print("your score is---",y)        
+        
+if (z>y and y>p)and(p>y or y>z):
+    print(f"hey{a} you WON----------------#####@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ The Game..........Congratulations^^^^")
+elif (z<y or y<z)or (p<y or y<p):
+    print(f"sorry{a} you Lost the game!!!!!!!!!!!!!!!byeee--")
+    
+  
+elif (z==y or p==y):
+    print("The match was draw---------++++++++++")
+    
+            
